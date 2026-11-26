@@ -16,11 +16,11 @@ export class ShippingService {
         statusCode: 400,
         message: 'zone ไม่ถูกต้อง',
       });
-
-      const extraKg = Math.ceil(Math.max(weight - 1, 0));
-      const baseFee = 50 + 18 * extraKg;
-
-      return { weight, zone, baseFee, zoneFee, total: baseFee + zoneFee };
     }
+
+    const extraKg = Math.ceil(Math.max(weight - 1, 0));
+    const baseFee = 50 + 18 * extraKg;
+
+    return { weight, zone, baseFee, zoneFee, total: baseFee + zoneFee };
   }
 }
